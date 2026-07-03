@@ -1,11 +1,10 @@
 # 02 · Ruta de aprendizaje para DOMINAR el tema (12 meses, casi todo gratis)
 
-> Versión 2 — mejorada. Cambios clave respecto a la versión anterior:
-> 1. **Fase 0 nueva**: un arranque suave de programación para perder el miedo (con recursos **en español**).
-> 2. **Puntos de control (checkpoints)**: criterios objetivos para saber si puedes avanzar de fase.
-> 3. **Horizonte honesto**: 6 meses te hacen *competente*; **dominar** requiere ~12. El plan ahora cubre ambos.
-> 4. **Sistema de retención**: qué hacer para que lo aprendido no se olvide.
-> 5. **Cómo usar la IA (Claude) como tutor** sin engañarte a ti mismo.
+> Versión 3. Novedades de esta versión:
+> - **Carril de empleabilidad 💼** integrado en las Fases 1–2: SQL, un dashboard (Power BI) y un primer proyecto freelance hacia el mes 6–9. La meta sigue siendo **científico de datos**; el carril 💼 te hace contratable como **analista** por el camino (ver la nueva sección "Analista vs. científico").
+> - **Multiplicadores de ingreso**: inglés y contexto de negocio.
+>
+> (De la versión 2 se conservan: Fase 0 en español, checkpoints por fase, horizonte honesto de 12 meses, sistema de retención y guía para usar la IA como tutor.)
 >
 > Dedicación: **1–1.5 h/día** (8–10 h/semana). Si un mes te toma dos, no pasa nada: los checkpoints mandan, no el calendario.
 
@@ -22,6 +21,20 @@ FASE 3 (meses 7–12)    Dominio: Bayes, series temporales, ── DOMINIO real
 ```
 
 **Regla de oro:** no avanzas de fase hasta pasar su checkpoint. Es mejor repetir un mes que construir sobre arena.
+
+---
+
+## Analista vs. científico de datos: tu meta no cambia, el camino gana un escalón
+
+Tu meta es ser **científico de datos** (modelos, probabilidad, predicción — lo que esta ruta ya construye). Pero al mercado laboral casi nadie entra directo como científico: el rol de **analista de datos** es el escalón de entrada que **te paga mientras terminas** de construir el perfil de científico. La mayoría de científicos de datos fueron analistas primero.
+
+| | Analista de datos | Científico de datos |
+|---|-------------------|---------------------|
+| Pregunta que responde | "¿Qué pasó y por qué?" | "¿Qué va a pasar y qué hacemos?" |
+| Herramientas núcleo | **SQL**, Excel, dashboards (Power BI/Tableau), algo de Python | Python, estadística profunda, **machine learning**, modelos |
+| Entrada realista al empleo | 6–12 meses de estudio | 18–24 meses (o creciendo internamente desde analista) |
+
+La superposición es ~70% (datos, limpieza, estadística, comunicación). El científico añade la capa de modelado — justo lo que cubren las Fases 2 y 3. Por eso esta ruta forma **ambos perfiles a la vez**: el *carril de empleabilidad* (marcado con 💼 abajo) te hace contratable como analista hacia el mes ~9, y el resto de la ruta te convierte en científico hacia el mes ~24. No es un desvío: es el mismo camino con una puerta de ingreso antes.
 
 ---
 
@@ -90,10 +103,11 @@ Escribes desde cero, en Colab, una función que reciba una probabilidad y un pre
 
 **Proyecto (une los meses 1 y 2):** calcula con `scipy.stats.poisson` la probabilidad de que un equipo que promedia 1.4 goles marque 0, 1, 2, 3 goles, y compárala con las frecuencias reales del CSV. Ver que la teoría encaja con datos reales es un momento mágico.
 
-### Mes 3 — Visualización + primer modelo
+### Mes 3 — Visualización + primer modelo + SQL 💼
 
 - 🟢 [Kaggle Learn · Data Visualization](https://www.kaggle.com/learn/data-visualization).
 - 🟢 [Kaggle Learn · Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning).
+- 💼 [Kaggle Learn · Intro to SQL](https://www.kaggle.com/learn/intro-to-sql) (~4 h) y luego [Advanced SQL](https://www.kaggle.com/learn/advanced-sql). **SQL aparece en más del 80% de las vacantes de datos** — es la habilidad que más rápido te vuelve empleable, y es fácil: si ya piensas en pandas, SQL es lo mismo con otra sintaxis.
 - 📖 Opcional y motivador: *The Signal and the Noise* (Nate Silver).
 
 **Proyecto:** regresión logística que prediga si gana el local con 2–3 variables. Grafica sus probabilidades.
@@ -102,6 +116,7 @@ Escribes desde cero, en Colab, una función que reciba una probabilidad y un pre
 1. Cargas un CSV nuevo y produces una tabla resumen con pandas (agrupar, promediar, ordenar).
 2. Explicas en voz alta, a otra persona, qué es una distribución de Poisson y por qué sirve para goles.
 3. Entrenas una regresión logística y explicas qué significa su salida.
+4. 💼 Escribes una consulta SQL con `JOIN` y `GROUP BY` sobre dos tablas y explicas qué devuelve.
 
 ---
 
@@ -134,12 +149,19 @@ Escribes desde cero, en Colab, una función que reciba una probabilidad y un pre
 
 **Proyecto:** 4 semanas registrando cada pronóstico (tu probabilidad, precio del mercado, resultado) y calcula tu Brier.
 
+### 💼 Carril de empleabilidad Fase 2 (meses 5–6, en paralelo)
+
+- Descarga [Power BI Desktop](https://www.microsoft.com/es-es/power-platform/products/power-bi/desktop) (gratis) y construye **un dashboard financiero** con datos reales (ej. indicadores macro de [FRED](https://fred.stlouisfed.org/) o datos de tu liga). Súbelo al portafolio con capturas y explicación.
+- Con Python + SQL + un dashboard publicado ya tienes el kit mínimo de analista. **Hito del mes 6–9:** consigue tu **primer proyecto freelance pequeño** (automatizar un reporte, un dashboard para una pyme) en [Workana](https://www.workana.com/) o [Upwork](https://www.upwork.com/). No es por el dinero: es la primera validación de mercado de tu habilidad, y una línea real en tu portafolio.
+- Aprovecha tu carrera: proyectos con sabor a **finanzas/fintech** (el sector que mejor paga en LATAM) te diferencian de los mil portafolios genéricos de Titanic e iris.
+
 ### ✅ Checkpoint Fase 2 (sin ayuda)
 1. Reconstruyes el modelo de Poisson del [`docs/04`](04-modelado-tablas-prediccion.md) desde cero en un notebook limpio.
 2. Tu backtest reporta ROI, número de apuestas y log loss, y puedes defender por qué no tiene look-ahead bias.
 3. Tienes ≥ 30 pronósticos registrados con tu Brier calculado.
+4. 💼 Tienes un dashboard publicado en tu portafolio y has enviado al menos 5 propuestas freelance.
 
-**Al pasar este checkpoint eres *competente*.** Lo que sigue es la diferencia entre competente y dominio.
+**Al pasar este checkpoint eres *competente*** (y contratable como analista de datos). Lo que sigue es la diferencia entre competente y dominio — es decir, el tramo de analista a **científico**.
 
 ---
 
@@ -175,6 +197,15 @@ El dominio no es "más cursos": es **profundidad en tres frentes + volumen de pr
 4. Tienes 100+ operaciones en papel documentadas y sabes exactamente cuál es (o no es) tu ventaja.
 
 Si cumples los 4: ya no estás aprendiendo el tema. **Lo dominas.** Lo que sigue es refinamiento infinito, como en cualquier disciplina seria.
+
+---
+
+## Multiplicadores de ingreso (en paralelo, poco tiempo al día)
+
+Dos variables que no son "de datos" pero multiplican lo que ganarás con los mismos conocimientos:
+
+1. **Inglés (20 min/día desde hoy).** Es la frontera entre el mercado local y el remoto internacional, donde los sueldos de datos se multiplican por 3–5×. Con B2 puedes aplicar a remoto. Gratis: [Duolingo](https://www.duolingo.com/) para el hábito + consumir StatQuest/Kaggle en inglés con subtítulos (aprendes datos e inglés a la vez).
+2. **Contexto de negocio.** La IA está automatizando las tareas junior mecánicas; lo que los empleadores reportan que falta no es sintaxis sino criterio de negocio. Tu carrera (finanzas y negocios internacionales) es exactamente ese diferenciador — úsala eligiendo proyectos y vacantes de fintech/banca, no la escondas.
 
 ---
 
